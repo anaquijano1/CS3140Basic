@@ -15,6 +15,8 @@ public class Main {
         }
         Car car1= new Car(4,"pink");
         Car car2= new Car(4,"green");
+        Car car3= new Car(4,"black");
+
 
         System.out.println(car1);
         System.out.println(car2);
