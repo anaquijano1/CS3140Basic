@@ -18,6 +18,7 @@ public class Main {
 
         System.out.println(car1);
         System.out.println(car2);
+        System.out.println("HELLO");
 
     }
 }
