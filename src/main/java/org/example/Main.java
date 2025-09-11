@@ -1,5 +1,15 @@
 package org.example;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+//https://stackoverflow.com/questions/409784/whats-the-simplest-way-to-print-a-java-array
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.*;
+
+
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -39,10 +49,50 @@ public class Main {
 
 
 
+         ArrayList<String> states=new ArrayList<>();
+         ArrayList<Integer> population=new ArrayList<>();
+
+        states.add("BC");
+        population.add(20);
+        states.add("AB");
+        population.add(20);
+        states.add("AC");
+        population.add(20);
+        states.add("AD");
+        population.add(20);
+        states.add("BE");
+        population.add(20);
+        states.add("CA");
+        population.add(20);
+        states.add("CD");
+        population.add(20);
+
+        System.out.println("Population: "+population);
+        System.out.println("States: "+states);
+        String [][] both= new String[states.size()][2];
 
 
 
-        for (int i = 1; i <= 5; i++) {
+        for (int i=0;i<states.size();i++){
+                both[i][0]=states.get(i);
+                //https://stackoverflow.com/questions/5071040/java-convert-integer-to-string
+                both[i][1]=Integer.toString(population.get(i));
+        }
+
+        //SORT HERE
+
+
+        //https://stackoverflow.com/questions/409784/whats-the-simplest-way-to-print-a-java-array
+        System.out.println(Arrays.deepToString(both));
+
+
+
+
+
+
+
+
+            for (int i = 1; i <= 5; i++) {
             //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
@@ -57,6 +107,7 @@ public class Main {
         System.out.println("commit");
 
 
-
     }
+
+
 }
